@@ -1,0 +1,57 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Gateway (JS)",
+            "program": "${workspaceFolder}/gateway.js",
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Atuador (JS)",
+            "program": "${workspaceFolder}/atuador.js",
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Sensor (JS)",
+            "program": "${workspaceFolder}/sensor.js",
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch API (JS)",
+            "program": "${workspaceFolder}/api.js",
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Frontend (Vue.js)",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "serve"
+            ],
+            "cwd": "${workspaceFolder}/frontend",
+            "console": "integratedTerminal"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "🚀 Launch All Services",
+            "configurations": [
+                "Launch Gateway (JS)",
+                "Launch Atuador (JS)",
+                "Launch Sensor (JS)",
+                "Launch API (JS)",
+                "Launch Frontend (Vue.js)"
+            ]
+        }
+    ]
+}

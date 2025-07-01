@@ -1,0 +1,18 @@
+{
+  "name": "smart-city-js",
+  "version": "1.0.0",
+  "description": "Projeto de Sistemas Distribuídos com Node.js e Sockets",
+  "main": "gateway.js",
+"scripts": {
+    "build-proto": "protoc --plugin=protoc-gen-js=./node_modules/.bin/protoc-gen-js.cmd --js_out=import_style=commonjs,binary:. proto/smart_city.proto",
+    "start-gateway": "node gateway.js",
+    "start-atuador": "node atuador.js",
+    "start-sensor": "node sensor.js",
+    "start-api": "node api.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "google-protobuf": "^3.21.2"
+  }
+}
