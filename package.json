@@ -4,7 +4,7 @@
   "description": "Projeto de Sistemas Distribuídos com Node.js e Sockets",
   "main": "gateway.js",
 "scripts": {
-    "build-proto": "protoc --plugin=protoc-gen-js=./node_modules/.bin/protoc-gen-js.cmd --js_out=import_style=commonjs,binary:. proto/smart_city.proto",
+    "build-proto": "grpc_tools_node_protoc --js_out=... --proto_path=proto proto/*.proto",
     "start-gateway": "node gateway.js",
     "start-atuador": "node atuador.js",
     "start-sensor": "node sensor.js",
